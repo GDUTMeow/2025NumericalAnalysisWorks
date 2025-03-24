@@ -6,7 +6,7 @@
 
 ### 实验
 
-- [实验1：减少运算次数的实验结果分析、求解非线性方程的二分法实现](/GDUTMeow/2025NumericalAnalysisWorks/tree/master/Experiments/Section1)
+- [实验1：减少运算次数的实验结果分析、求解非线性方程的二分法实现](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/tree/master/Experiments/Section1)
 
 ### 课后作业
 
