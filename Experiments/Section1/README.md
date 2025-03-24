@@ -34,8 +34,8 @@
 
 ### 算法源代码
 
-- 常规算法：见 `Normal.py`
-- 秦九韶算法：见 `QinJiushao.py`
+- 常规算法：见 [Normal.py](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Experiments/Section1/Normal.py)
+- 秦九韶算法：见 [QinJiushao.py](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Experiments/Section1/QinJiushao.py)
 
 ### 结果讨论
 
@@ -85,8 +85,24 @@
 
 ### 算法源代码
 
-- 见 `Dichotomy.py`
+- 见 [Dichotomy.py](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Experiments/Section1/Dichotomy.py)
 
 ### 结果讨论
 
 通过二分法和零点存在性定理，我们可以无限逼近于结果，直到其达到我们的精度要求。
+
+## 附加题
+
+- 对于大量的输出数据，有什么便捷的方法把列表数据输出，方便贴到word文档呢？或者直接把数据矩阵输出到.txt文件中呢？
+
+  - 我采取的做法是使用Markdown表格进行提取，按照Markdown的语法，使用竖线即可表示Markdown的表格，例如
+
+  - ```markdown
+    | 表头1 | 表头2 | … | 表头n |
+    | --- | --- | --- | --- |
+    ```
+
+  - 这样就可以创建一个表格，于是放到Typora里面就可以了
+
+  - 接着从Typora里面复制到Excel里面转成Office的表格格式，最后放到Word里面就可以了。
+
