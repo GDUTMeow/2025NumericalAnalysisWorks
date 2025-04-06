@@ -34,6 +34,6 @@
 >     - 用顺序 Gauss 消元法与列主元 Gauss 消元法解方程组
 >       - $\begin{pmatrix}  6&  3&  2& \frac{1}{3}\\  10& 5 & 6 & 0\\  8&5  &3  &0\end{pmatrix}$
 >       - 题解：[顺序高斯消元法](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week5/SequentialGauss.py) | [列主元高斯消元法](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week5/ColumnPivotingGauss.py)
->     - 用追赶法解方程组
+>     - 用追赶法（Tridiagonal Matrix Algorithm, TDMA）解方程组
 >       - $\begin{pmatrix}  4&  -1&  &  & \\  -1&  4&  -1&  & \\  &  -1& 4 & -1 & \\  &  &  -1& 4 & -1\\  &  &  & -1 &4\end{pmatrix}\begin{pmatrix} x1\\ x2\\ x3\\ x4\\x5\end{pmatrix} =\begin{pmatrix} 100\\ 200\\ 200\\ 200\\100\end{pmatrix}$
 >     - 用 LU 分解求矩阵 $A = \begin{pmatrix}  2& 1 & 2\\  1&2  & 3\\  4&  1&2\end{pmatrix}$ 的行列式值和逆矩阵
