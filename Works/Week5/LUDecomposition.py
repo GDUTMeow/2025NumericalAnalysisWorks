@@ -11,9 +11,9 @@ A = [1, 2, 3]
 """
 
 MATRIX = [
-    [2, 1, 2],
-    [1, 2, 3],
-    [4, 1, 2],
+    [Fraction(2), Fraction(1), Fraction(2)],
+    [Fraction(1), Fraction(2), Fraction(3)],
+    [Fraction(4), Fraction(1), Fraction(2)],
 ]
 
 matrix_inv = [  # 定义逆矩阵
@@ -71,6 +71,61 @@ def calculate_det_value(matrix: List[List[Union[int, float]]]) -> float:
         det_value *= matrix[i][i]  # 乘法运算
     return det_value
 
+def invert_lower_triangular(L: List[List[Fraction]]) -> List[List[Fraction]]:
+    """
+    计算下三角矩阵L的逆矩阵，L对角线为1
+    :param L: 下三角矩阵
+    :return: 逆矩阵
+    """
+    n = len(L)
+    Linv = [[Fraction(0,1) for _ in range(n)] for _ in range(n)]
+    # 对角线元素为1
+    for i in range(n):
+        Linv[i][i] = Fraction(1,1)
+    # 逐列计算
+    for j in range(n):
+        for i in range(j+1, n):
+            sum_val = Fraction(0,1)
+            for k in range(j, i):
+                sum_val += L[i][k] * Linv[k][j]
+            Linv[i][j] = -sum_val
+    return Linv
+
+def invert_upper_triangular(U: List[List[Fraction]]) -> List[List[Fraction]]:
+    """
+    计算上三角矩阵U的逆矩阵
+    :param U: 上三角矩阵
+    :return: 逆矩阵
+    """
+    n = len(U)
+    Uinv = [[Fraction(0,1) for _ in range(n)] for _ in range(n)]
+    for j in range(n):
+        x = [Fraction(0,1) for _ in range(n)]
+        x[j] = Fraction(1,1) / U[j][j]
+        for i in range(j-1, -1, -1):
+            sum_val = Fraction(0,1)
+            for k in range(i+1, j+1):
+                sum_val += U[i][k] * x[k]
+            x[i] = -sum_val / U[i][i]
+        for i in range(n):
+            Uinv[i][j] = x[i]
+    return Uinv
+
+def matrix_mult(a: List[List[Fraction]], b: List[List[Fraction]]) -> List[List[Fraction]]:
+    """
+    矩阵乘法
+    :param a: 矩阵A
+    :param b: 矩阵B
+    :return: 矩阵乘积AB
+    """
+    n = len(a)
+    result = [[Fraction(0,1) for _ in range(n)] for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                result[i][j] += a[i][k] * b[k][j]
+    return result
+
 if __name__ == "__main__":
     print(f"\n{'='*40}\n初始矩阵:")
     for row in MATRIX:
@@ -107,6 +162,18 @@ if __name__ == "__main__":
     det_U_value = calculate_det_value(global_u)  # 计算 U 矩阵的行列式值
     det_value = det_L_value * det_U_value  # 行列式的值
     print(f"\n{'='*40}\n行列式的值: {det_value}")
+    
+    # 计算 L 和 U 矩阵的逆矩阵
+    L_inv = invert_lower_triangular(global_l)
+    U_inv = invert_upper_triangular(global_u)
+    
+    # 计算A的逆矩阵
+    A_inv = matrix_mult(U_inv, L_inv)
+
+    # 打印A的逆矩阵
+    print(f"\n{'='*40}\nA的逆矩阵:")
+    for row in A_inv:
+        print([e for e in row])
 
     # 打印运算次数统计
     print(f"\n{'='*40}\n运算次数统计:")

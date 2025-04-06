@@ -102,7 +102,7 @@ def get_y(
 
 def get_a(lidx: int) -> Union[int, float]:
     """
-    计算 a 值，根据公式
+    通过原矩阵获得 a
     ai = ai+1
     :param lidx: 当前行索引
     :return: 当前行的 a 值
@@ -114,8 +114,7 @@ def get_a(lidx: int) -> Union[int, float]:
 
 def get_c(lidx: int) -> Union[int, float]:
     """
-    计算 c 值，根据公式
-    ci = ci-1
+    通过原矩阵获得 c
     :param lidx: 当前行索引
     :return: 当前行的 c 值
     """
