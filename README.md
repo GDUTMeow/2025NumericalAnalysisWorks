@@ -38,3 +38,4 @@
 >       - $\begin{pmatrix}  4&  -1&  &  & \\  -1&  4&  -1&  & \\  &  -1& 4 & -1 & \\  &  &  -1& 4 & -1\\  &  &  & -1 &4\end{pmatrix}\begin{pmatrix} x1\\ x2\\ x3\\ x4\\x5\end{pmatrix} =\begin{pmatrix} 100\\ 200\\ 200\\ 200\\100\end{pmatrix}$
 >       - 题解：[追赶法求解方程组](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week5/ColumnPivotingGauss.py)
 >     - 用 LU 分解求矩阵 $A = \begin{pmatrix}  2& 1 & 2\\  1&2  & 3\\  4&  1&2\end{pmatrix}$ 的行列式值和逆矩阵
+>       - 题解：[LU分解法求矩阵行列式、逆矩阵](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week5/ColumnPivotingGauss.py)
