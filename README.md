@@ -21,8 +21,8 @@
 
 > [!Tip]
 > - 作业4：重做本讲最后的计算例子
->   - ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week4/picture/function.svg)
->   - 其中初值取 ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week4/picture/first.svg)，并设置停止条件为 ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week4/picture/condition.svg)
+>   - ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week4/pictures/function.svg)
+>   - 其中初值取 ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week4/pictures/first.svg)，并设置停止条件为 ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week4/pictures/condition.svg)
 >   - [源码](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week4/Homework4.py) | [原始数据](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week4/Homework4.md) | [处理后的数据表格](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week4/Homework4.xlsx)
 
 > [!tip]
@@ -32,10 +32,10 @@
 >   - 实现Python程序进行计算（顺序Gauss，列主元Gauss，追赶法，LU分解共4个算法），除输出结果外，还需要输出算法执行的乘除次数。
 >   - 附上可编辑版本源代码，代码放框内，连同手写过程拍照，放到一个pdf提交）  
 >     - 用顺序 Gauss 消元法与列主元 Gauss 消元法解方程组
->       - ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week5/picture/GaussMatrix.svg)
+>       - ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week5/pictures/GaussMatrix.svg)
 >       - 题解：[顺序高斯消元法](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week5/SequentialGauss.py) | [列主元高斯消元法](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week5/ColumnPivotingGauss.py)
 >     - 用追赶法（Tridiagonal Matrix Algorithm, TDMA）解方程组
->       - ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week5/picture/TDMAMatrix.svg)
+>       - ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week5/pictures/TDMAMatrix.svg)
 >       - 题解：[追赶法求解方程组](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week5/ColumnPivotingGauss.py)
->     - 用 LU 分解求矩阵 ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week5/picture/LUDecomposition.svg) 的行列式值和逆矩阵
+>     - 用 LU 分解求矩阵 ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week5/pictures/LUDecomposition.svg) 的行列式值和逆矩阵
 >       - 题解：[LU分解法求矩阵行列式、逆矩阵](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week5/LUDecomposition.py)
