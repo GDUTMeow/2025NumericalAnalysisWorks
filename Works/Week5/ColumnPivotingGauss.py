@@ -21,7 +21,11 @@ global_plus_times = 0  # 加减法计数器
 global_times = 0       # 乘除法计数器
 
 def print_matrix(matrix: list, title: str) -> None:
-    """带格式的矩阵打印函数"""
+    """带格式的矩阵打印函数
+    :param matrix: 矩阵
+    :param title: 打印的标题
+    :return: None
+    """
     print(f"\n{title}")
     for row in matrix:
         print("[", end="")
@@ -30,7 +34,11 @@ def print_matrix(matrix: list, title: str) -> None:
                         f"{x:>7.3f}" for x in row]), end=" ]\n")
 
 def elimination(matrix: list, base_idx: int) -> None:
-    """列主元消元操作"""
+    """列主元消元操作
+    :param matrix: 矩阵
+    :param base_idx: 基准行索引
+    :return: None
+    """
     global global_plus_times, global_times
     
     print_matrix(matrix, f"消元前 [第{base_idx+1}步]")
@@ -66,7 +74,10 @@ def elimination(matrix: list, base_idx: int) -> None:
     print_matrix(matrix, f"消元后 [第{base_idx+1}步]")
 
 def back_substitution(matrix: list) -> None:
-    """回代求解"""
+    """回代求解
+    :param matrix: 消元后的矩阵
+    :return: None
+    """
     global global_plus_times, global_times
     
     print("\n" + "="*40 + "\n开始回代求解:")
@@ -88,7 +99,10 @@ def back_substitution(matrix: list) -> None:
         print(f"x{i+1} = ({matrix[i][n]} - {terms}) / {matrix[i][i]} = {solved[i]}")
 
 def column_pivot_gauss(matrix: list) -> None:
-    """列主元高斯消元法主函数"""
+    """列主元高斯消元法主函数
+    :param matrix: 输入矩阵
+    :return: None
+    """
     # 创建矩阵副本
     matrix = [row.copy() for row in matrix]
     
