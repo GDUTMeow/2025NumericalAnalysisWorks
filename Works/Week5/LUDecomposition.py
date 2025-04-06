@@ -59,6 +59,18 @@ def position_zero(lidx: int, nidx: int) -> None:
         global_matrix[lidx][i] -= m * global_matrix[nidx][i]  # 行变换运算
         global_plus_times += 1  # 加法计数器加一
         
+        
+def calculate_det_value(matrix: List[List[Union[int, float]]]) -> float:
+    """
+    计算行列式的值
+    :param matrix: 矩阵
+    :return: 行列式的值
+    """
+    det_value = 1.0
+    for i in range(len(matrix)):
+        det_value *= matrix[i][i]  # 乘法运算
+    return det_value
+
 if __name__ == "__main__":
     print(f"\n{'='*40}\n初始矩阵:")
     for row in MATRIX:
@@ -89,6 +101,12 @@ if __name__ == "__main__":
     pprint(global_l)
     print(f"\n{'='*40}\nU 矩阵:")
     pprint(global_u)
+
+    # 打印行列式的值
+    det_L_value = calculate_det_value(global_l)  # 计算 L 矩阵的行列式值
+    det_U_value = calculate_det_value(global_u)  # 计算 U 矩阵的行列式值
+    det_value = det_L_value * det_U_value  # 行列式的值
+    print(f"\n{'='*40}\n行列式的值: {det_value}")
 
     # 打印运算次数统计
     print(f"\n{'='*40}\n运算次数统计:")
