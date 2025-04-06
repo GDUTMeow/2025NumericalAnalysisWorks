@@ -21,8 +21,8 @@
 
 > [!Tip]
 > - 作业4：重做本讲最后的计算例子
->   - $7x^5 - 13x^4-21x^3-12x^2+58x+3=0, x∈[1,2]$
->   - 其中初值取 x0 = 1.5，并设置停止条件为 | x(n) - x(n-1) | < 1e-5
+>   - ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week4/picture/function.svg)
+>   - 其中初值取 ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week4/picture/first.svg)，并设置停止条件为 ![](https://cdn.jsdelivr.net/gh/GDUTMeow/2025NumericalAnalysisWorks/Works/Week4/picture/condition.svg)
 >   - [源码](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week4/Homework4.py) | [原始数据](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week4/Homework4.md) | [处理后的数据表格](https://github.com/GDUTMeow/2025NumericalAnalysisWorks/blob/master/Works/Week4/Homework4.xlsx)
 
 > [!tip]
