@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
         # 计算 L 矩阵的第 i 列
         for j in range(i + 1, n):
-            global_l[j][i] = get_m(i, j)  # 获取置零系数 m
+            global_l[j][i] = get_m(j, i)  # 获取置零系数 m
             position_zero(j, i)  # 将第 j 行的非零首元置零
 
     # 打印 L 和 U 矩阵
